@@ -12,11 +12,7 @@ The project utilizes BERT, a pre-trained language model known for its contextual
 ## Key Features
 - Conducted extensive exploratory data analysis using Plotly and WordCloud to gain insights into the customer feedback dataset.
 - Applied data balancing techniques such as negation generation and oversampling using the Spacy and NLTK frameworks to address class imbalance.
-- Developed a BERT-based model using TensorFlow for sentiment analysis, achieving an accuracy of 84%.
 - Tuned the model for high precision in identifying positive sentiments and high recall in identifying negative sentiments.
-- Utilized NLP techniques including Spacy, NLTK, and TensorFlow for sentiment analysis and machine learning.
-- Applied data balancing techniques such as negation generation and oversampling to address class imbalance.
-- Utilized Plotly and Word Cloud for exploratory data analysis (EDA) to gain insights into the customer feedback dataset.
 - Developed a BERT-based model for sentiment analysis on a balanced dataset, achieving an accuracy of 84% with a focus on high precision for positive sentiments and high recall for negative sentiments.
 
 ## Usage
