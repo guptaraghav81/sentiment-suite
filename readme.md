@@ -1,6 +1,5 @@
 # Improving Customer Satisfaction: Sentiment Analysis on Customer Feedback for an App Designed for Online Classes and Video Conferencing Using BERT
 
-![Image Description](customersatisfaction.png)
 
 
 ## Objective
