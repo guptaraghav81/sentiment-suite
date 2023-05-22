@@ -1,53 +1,39 @@
 # Improving Customer Satisfaction: Sentiment Analysis on Customer Feedback for an App Designed for Online Classes and Video Conferencing Using BERT
 
-## Abstract
-In this project, we analyzed customer feedback for an app designed for online classes and video conferencing. We performed sentiment analysis on the text data and created a new label column to balance the dataset, as all original labels were positive. We also generated negative samples from positive samples to increase the size of the negative class. The resulting dataset was balanced by oversampling the positive class. We split the dataset into train and test using the train_test_split function and trained a BERT base classifier model on the training data. Finally, we evaluated the performance of the model on the test data using the classification report, which showed an overall accuracy of 84%.
+## Objective
+The objective of this project is to improve customer satisfaction by performing sentiment analysis on customer feedback for an app designed for online classes and video conferencing. The analysis will be conducted using BERT (Bidirectional Encoder Representations from Transformers), a state-of-the-art natural language processing model.
 
-## Problem Statement
-The goal of this project is to perform sentiment analysis on customer feedback for an app designed for online classes and video conferencing. The original dataset had only positive labels, which needed to be balanced by generating negative samples from positive ones. We used the resulting dataset to train a BERT base classifier model to predict the sentiment of customer feedback accurately. The model's performance was evaluated on the test data, and we aimed to achieve a high accuracy score.
+## Data
+The dataset consists of customer feedback collected from users of the app. The feedback includes text-based reviews and comments, expressing their opinions and experiences with the app's features, functionality, and overall user experience.
 
-## Contents
-- Sentiment Analysis and Labeling using VADER
-- Exploratory Data Analysis
-- Sentiment Analysis of Customer Feedback with Histogram Visualization
-- Top 10 Most Frequent Words in "reason" Column after Stopword Removal with Bar Chart Visualization
-- Co-occurrence of Top 30 Most Frequent Words in Customer Feedback Dataset with Heatmap Visualization
-- Distribution of Sentiment Labels in Customer Feedback Dataset as a Pie Chart
-- Topic Modeling of "reason" Column in Customer Feedback Dataset with LDA Algorithm
-- Negation Generation for Positive Examples
-- Oversampling to Address Class Imbalance in a Dataset
-- Train Test Split
-- BERT Preprocessing and Encoding Layers Initialization
-- BERT-based Sentiment Analysis Model Architecture
-- Model Compilation and Metrics Selection
-- Summary
+## Methodology
+The project utilizes BERT, a pre-trained language model known for its contextual understanding of text. BERT will be fine-tuned using the customer feedback dataset to train a sentiment analysis model. Fine-tuning involves updating the model's parameters using the specific task of sentiment analysis on the customer feedback data.
+
+## Model Development
+The BERT model will be fine-tuned to perform sentiment analysis, classifying each customer feedback into one of several sentiment categories, such as positive, negative, or neutral. The model will learn to identify the sentiment expressed in the feedback, allowing for better understanding of customer satisfaction levels.
 
 ## Usage
-You can follow the code blocks and explanations provided in this repository to understand and replicate the steps involved in performing sentiment analysis on customer feedback. Each code block is accompanied by a description and visualizations to help you analyze and interpret the results.
+To replicate the project, follow these steps:
 
-## Dependencies
-- Python (version X.X)
-- Pandas (version X.X)
-- NLTK (version X.X)
-- Seaborn (version X.X)
-- TextBlob (version X.X)
-- TensorFlow (version X.X)
-- TensorFlow Hub (version X.X)
-- Other required dependencies
+1. Install the required dependencies specified in the `requirements.txt` file.
+2. Prepare the dataset by collecting customer feedback data from the app and organizing it in a suitable format.
+3. Fine-tune the BERT model using the customer feedback dataset. This involves training the model on the labeled data and updating its parameters.
+4. Evaluate the performance of the fine-tuned model using appropriate evaluation metrics such as accuracy, precision, recall, and F1-score.
+5. Use the trained model to perform sentiment analysis on new customer feedback, predicting the sentiment expressed in the text.
+6. Analyze the results and gain insights into customer satisfaction levels, identifying areas for improvement based on the sentiment analysis.
 
-## Installation
-1. Clone the repository: `git clone https://github.com/your-username/your-repository.git`
-2. Install the required dependencies: `pip install -r requirements.txt`
+## Future Enhancements
+There are several possible future enhancements for this project:
 
-## Contributing
-Contributions to this project are welcome. You can contribute by adding new features, fixing bugs, or improving the documentation. Please open a pull request with your changes, and they will be reviewed.
+- Incorporate additional features or data sources, such as user demographics, app usage statistics, or user behavior patterns, to enrich the sentiment analysis and gain deeper insights into customer satisfaction.
+- Explore other state-of-the-art natural language processing models, such as GPT-3 or Transformer-XL, to compare their performance with BERT and potentially achieve even better sentiment analysis results.
+- Implement a real-time sentiment analysis system that continuously processes incoming customer feedback, providing instant insights for effective decision-making and customer satisfaction improvements.
 
 ## License
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+This project is licensed under the [MIT License](LICENSE).
 
-## Acknowledgments
-We would like to acknowledge the contributions of [Author's Name] for their valuable insights and guidance in completing this project.
+## Acknowledgements
+We would like to express our gratitude to the developers of BERT and the creators of the customer feedback dataset used in this project. Their contributions have been instrumental in the successful execution of this sentiment analysis project.
 
 ## Contact
-For any questions or inquiries, please contact [Your Name] at [your-email@example.com].
-
+For further information or inquiries, please contact [Project Team Name](mailto:team@example.com).
