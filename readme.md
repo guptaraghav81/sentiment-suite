@@ -13,6 +13,10 @@ Due to the initial class imbalance, where positive labels were more prevalent th
 ## Methodology
 The project utilizes BERT, a pre-trained language model known for its contextual understanding of text. BERT was fine-tuned using the sentiment-labeled dataset to train a sentiment analysis model. Fine-tuning involves updating the model's parameters using the specific task of sentiment analysis on the customer feedback data.
 
+## Analysis
+[The complete analysis can be viewed here.]([URL_of_your_notebook](https://github.com/Aravinth-Megnath/NLP-Project/blob/main/Customer_satisfaction.ipynb))
+
+
 ## Key Features
 - Performed sentiment analysis on the initial dataset, labeling rows as 1 and 0 based on the sentiment expressed in the text.
 - Utilized NLP techniques including Spacy, NLTK, and TensorFlow for sentiment analysis and machine learning.
