@@ -32,7 +32,7 @@ The sentiment analysis model achieved the following performance metrics on the t
        0       0.95      0.70      0.80       659
        1       0.77      0.97      0.86       702
 
-accuracy                           0.84      1361
+          accuracy                           0.84      1361
 
 
 The precision, recall, and F1-score are commonly used metrics to evaluate the performance of a binary classification model. In this case, class 0 represents negative sentiments and class 1 represents positive sentiments.
