@@ -23,6 +23,26 @@ The project utilizes BERT, a pre-trained language model known for its contextual
 - Tuned the model for high precision in identifying positive sentiments and high recall in identifying negative sentiments.
 - Developed a BERT-based model for sentiment analysis on a balanced dataset, achieving an accuracy of 84% with a focus on high precision for positive sentiments and high recall for negative sentiments.
 
+## Classification Results
+
+The sentiment analysis model achieved the following performance metrics on the test dataset:
+
+          precision    recall  f1-score   support
+
+       0       0.95      0.70      0.80       659
+       1       0.77      0.97      0.86       702
+
+accuracy                           0.84      1361
+
+
+The precision, recall, and F1-score are commonly used metrics to evaluate the performance of a binary classification model. In this case, class 0 represents negative sentiments and class 1 represents positive sentiments.
+
+The model achieved an accuracy of 84%, indicating the percentage of correctly classified instances out of the total test dataset. The precision for class 0 is 95%, meaning that when the model predicted a sentiment as negative, it was correct 95% of the time. The recall for class 1 is 97%, indicating that the model successfully identified 97% of the positive sentiments in the dataset. The F1-score combines precision and recall, providing a single metric to assess the model's overall performance.
+
+These results suggest that the sentiment analysis model has a good ability to classify customer feedback accurately, with a focus on correctly identifying positive sentiments.
+
+
+
 ## Usage
 To replicate the project, follow these steps:
 
