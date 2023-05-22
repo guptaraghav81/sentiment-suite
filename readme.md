@@ -4,14 +4,19 @@
 The objective of this project is to improve customer satisfaction by performing sentiment analysis on customer feedback for an app designed for online classes and video conferencing. The analysis will be conducted using BERT (Bidirectional Encoder Representations from Transformers), a state-of-the-art natural language processing model.
 
 ## Data
-The dataset consists of customer feedback collected from users of the app. The feedback includes text-based reviews and comments, expressing their opinions and experiences with the app's features, functionality, and overall user experience.
+The initial dataset consisted of customer feedback collected from users of the app. However, all the rows were initially labeled as 1, indicating positive sentiment, and there were no rows labeled as 0, indicating negative sentiment. To address this issue, sentiment analysis was performed on the dataset, and the rows were labeled as 1 and 0 based on the sentiment expressed in the text. To improve the representation of negative sentiment, negation generation techniques were applied. 
+
+Due to the initial class imbalance, where positive labels were more prevalent than negative labels, oversampling techniques were employed to balance the dataset. This involved creating additional instances of the positive class to match the number of instances in the negative class.
 
 ## Methodology
-The project utilizes BERT, a pre-trained language model known for its contextual understanding of text. BERT will be fine-tuned using the customer feedback dataset to train a sentiment analysis model. Fine-tuning involves updating the model's parameters using the specific task of sentiment analysis on the customer feedback data.
+The project utilizes BERT, a pre-trained language model known for its contextual understanding of text. BERT was fine-tuned using the sentiment-labeled dataset to train a sentiment analysis model. Fine-tuning involves updating the model's parameters using the specific task of sentiment analysis on the customer feedback data.
 
 ## Key Features
-- Conducted extensive exploratory data analysis using Plotly and WordCloud to gain insights into the customer feedback dataset.
-- Applied data balancing techniques such as negation generation and oversampling using the Spacy and NLTK frameworks to address class imbalance.
+- Performed sentiment analysis on the initial dataset, labeling rows as 1 and 0 based on the sentiment expressed in the text.
+- Utilized NLP techniques including Spacy, NLTK, and TensorFlow for sentiment analysis and machine learning.
+- Utilized Plotly and Word Cloud for exploratory data analysis (EDA) to gain insights into the customer feedback dataset.
+- Applied negation generation techniques to enhance the representation of negative sentiment in the dataset.
+- Addressed class imbalance by oversampling the positive class to achieve a balanced dataset.
 - Tuned the model for high precision in identifying positive sentiments and high recall in identifying negative sentiments.
 - Developed a BERT-based model for sentiment analysis on a balanced dataset, achieving an accuracy of 84% with a focus on high precision for positive sentiments and high recall for negative sentiments.
 
@@ -19,13 +24,16 @@ The project utilizes BERT, a pre-trained language model known for its contextual
 To replicate the project, follow these steps:
 
 1. Install the required dependencies specified in the `requirements.txt` file.
-2. Prepare the dataset by collecting customer feedback data from the app and organizing it in a suitable format.
-3. Conduct exploratory data analysis (EDA) using Plotly and WordCloud to gain insights into the dataset.
-4. Apply data balancing techniques such as negation generation and oversampling to address class imbalance.
-5. Develop a BERT-based model using TensorFlow for sentiment analysis, fine-tuning it on the customer feedback dataset.
-6. Evaluate the performance of the model using appropriate evaluation metrics such as accuracy, precision, recall, and F1-score.
-7. Utilize the trained model to perform sentiment analysis on new customer feedback, predicting the sentiment expressed in the text.
-8. Analyze the results and gain insights into customer satisfaction levels, identifying areas for improvement based on the sentiment analysis.
+2. Prepare the initial dataset by collecting customer feedback data from the app and organizing it in a suitable format.
+3. Perform exploratory data analysis (EDA) using Plotly and WordCloud to gain insights into the dataset.
+4. Perform sentiment analysis on the initial dataset, labeling the rows as 1 and 0 based on the sentiment expressed in the text.
+5. Apply negation generation techniques to enhance the representation of negative sentiment in the dataset.
+6. Address class imbalance by oversampling the positive class to achieve a balanced dataset.
+7. Develop a BERT-based model using TensorFlow for sentiment analysis, fine-tuning it on the sentiment-labeled dataset.
+8. Evaluate the performance of the model using appropriate evaluation metrics such as accuracy, precision, recall, and F1-score.
+9. Utilize the trained model to perform sentiment analysis on new customer feedback, predicting the sentiment expressed in the text.
+10. Analyze the results and gain insights into customer satisfaction levels, identifying areas for improvement based on the sentiment analysis.
+
 
 ## Future Enhancements
 There are several possible future enhancements for this project:
@@ -41,4 +49,4 @@ This project is licensed under the [MIT License](LICENSE).
 We would like to express our gratitude to the developers of BERT and the creators of the customer feedback dataset used in this project. Their contributions have been instrumental in the successful execution of this sentiment analysis project.
 
 ## Contact
-For further information or inquiries
+For further information or inquiries, please contact [aravinthmegnath@gmail.com](mailto:aravinthmegnath@gmail.com).
