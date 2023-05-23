@@ -26,6 +26,45 @@ The complete analysis can be viewed [here.](https://github.com/Aravinth-Megnath/
 - Tuned the model for high precision in identifying positive sentiments and high recall in identifying negative sentiments.
 - Developed a BERT-based model for sentiment analysis on a balanced dataset, achieving an accuracy of 84% with a focus on high precision for positive sentiments and high recall for negative sentiments.
 
+## Exploratory Data Analysis
+
+### Visualization of Label Distribution After Sentiment Analysis
+
+![Label Distribution](![distribution](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/ee70f9fa-527d-43d9-85d5-3d445278bc45)
+)  
+Caption: Visualizing the distribution of sentiment labels after performing sentiment analysis on the customer feedback.
+
+### Word Cloud
+![Word Cloud Visualization](![word cloud](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/fa862685-fc74-4f8e-a07b-cd41aef7c424)
+)
+
+
+### Top 10 Most Frequent Words in "reason" Column after Stopword Removal
+
+![Top 10 Words](![frequent word](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/3097dc06-704d-4cdd-9a93-09c87ef6a092)
+)  
+Caption: Bar chart visualization showing the top 10 most frequent words in the "reason" column after removing stopwords.
+
+### Sentiment Analysis of Customer Feedback with Histogram Visualization
+
+![Sentiment Analysis](![histogram](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/0a461287-cf39-42eb-8a37-89805f8070ef)
+)  
+Caption: Histogram visualization of the sentiment scores after performing sentiment analysis on the customer feedback.
+
+
+### Co-occurrence of Top 30 Most Frequent Words in Customer Feedback Dataset with Heatmap Visualization
+
+![Co-occurrence Heatmap](![top 30](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/501fa775-0883-4c28-9280-f0fe3bdecd44)
+)  
+Caption: Heatmap visualization showing the co-occurrence of the top 30 most frequent words in the "reason" column.
+
+### Distribution of Sentiment Labels in Customer Feedback Dataset as a Pie Chart
+
+![Sentiment Distribution](![pie](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/cc65b18a-4c1e-4431-966f-f4479c7b6b4f)
+)  
+Caption: Pie chart visualization showing the distribution of sentiment labels in the customer feedback dataset.
+
+
 ## Classification Results
 
 The sentiment analysis model achieved the following performance metrics on the test dataset:
