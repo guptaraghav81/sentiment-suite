@@ -38,8 +38,6 @@ Caption: Visualizing the distribution of sentiment labels after performing senti
 ![Word Cloud Visualization](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/fa862685-fc74-4f8e-a07b-cd41aef7c424)
 )
 
-### Sentiment Analysis of Customer Feedback with Histogram Visualization
-![Histogram](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/7d1f1118-6402-4b00-b22e-41f8f479748b)
 
 ### Top 10 Most Frequent Words in "reason" Column after Stopword Removal
 
