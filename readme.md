@@ -113,5 +113,12 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgements
 We would like to express our gratitude to the developers of BERT and the creators of the customer feedback dataset used in this project. Their contributions have been instrumental in the successful execution of this sentiment analysis project.
 
-## Contact
-For further information or inquiries, please contact [aravinthmegnath@gmail.com](mailto:aravinthmegnath@gmail.com).
+## Feedback
+
+Your feedback is important to me! If you have any suggestions, questions, or feedback regarding this project, please feel free to reach out to me at:
+
+- Email: [aravinthmegnath@gmail.com]
+- LinkedIn: [https://www.linkedin.com/in/aravinth-meganathan-200667a1/]
+
+I appreciate your valuable input and look forward to hearing from you!
+
