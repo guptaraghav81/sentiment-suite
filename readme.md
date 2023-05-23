@@ -30,7 +30,7 @@ The complete analysis can be viewed [here.](https://github.com/Aravinth-Megnath/
 
 ### Visualization of Label Distribution After Sentiment Analysis
 
-![Label Distribution](![distribution](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/0fcaa757-dd55-4491-8d44-9b2ae3284371)
+![Label Distribution](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/0fcaa757-dd55-4491-8d44-9b2ae3284371)
   
 Caption: Visualizing the distribution of sentiment labels after performing sentiment analysis on the customer feedback.
 
