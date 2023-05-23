@@ -30,8 +30,8 @@ The complete analysis can be viewed [here.](https://github.com/Aravinth-Megnath/
 
 ### Visualization of Label Distribution After Sentiment Analysis
 
-![Label Distribution](![distribution](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/ee70f9fa-527d-43d9-85d5-3d445278bc45)
-)  
+![Label Distribution](![distribution](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/0fcaa757-dd55-4491-8d44-9b2ae3284371)
+  
 Caption: Visualizing the distribution of sentiment labels after performing sentiment analysis on the customer feedback.
 
 ### Word Cloud
@@ -61,7 +61,7 @@ Caption: Heatmap visualization showing the co-occurrence of the top 30 most freq
 ### Distribution of Sentiment Labels in Customer Feedback Dataset as a Pie Chart
 
 ![Sentiment Distribution](![pie](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/cc65b18a-4c1e-4431-966f-f4479c7b6b4f)
-)  
+
 Caption: Pie chart visualization showing the distribution of sentiment labels in the customer feedback dataset.
 
 
