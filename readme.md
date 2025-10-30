@@ -140,14 +140,14 @@ python src/sentiment_model/train_model.py
 # Launch web app
 streamlit run src/app/app.py
 ```
-📈 Deliverables Summary
-Part	Description	File
-1	Cleaned Dataset & Preprocessing Code	data_preprocessing.py / .ipynb
-2	Trained Sentiment Model	sentiment_model.pkl
-3	Summarization Notebook	text_summarization.ipynb
-4	Insight Report	AI_insights_report.pdf
-5	Deployment App	app.py / Streamlit
-🔮 Future Enhancements
+📈 Deliverables Summary <br>
+Part	Description	File <br>
+1	Cleaned Dataset & Preprocessing Code	data_preprocessing.py / .ipynb <br>
+2	Trained Sentiment Model	sentiment_model.pkl <br>
+3	Summarization Notebook	text_summarization.ipynb <br>
+4	Insight Report	AI_insights_report.pdf <br>
+5	Deployment App	app.py / Streamlit <br>
+🔮 Future Enhancements 
 
 Add multilingual sentiment support
 
