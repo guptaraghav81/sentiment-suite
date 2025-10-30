@@ -158,109 +158,29 @@ Build real-time monitoring dashboard
 
 Expand chatbot capabilities for deeper conversational analytics
 
-# ==========================================
-# 📊 Sentiment Analysis EDA Visualization Code
-# ==========================================
+### Visualization of Label Distribution After Sentiment Analysis
+![Label Distribution](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/0fcaa757-dd55-4491-8d44-9b2ae3284371)
+*Caption: Visualizing the distribution of sentiment labels after performing sentiment analysis on the customer feedback.*
 
-# ✅ Import necessary libraries
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from wordcloud import WordCloud
-import plotly.express as px
-from sklearn.feature_extraction.text import CountVectorizer
+### Word Cloud
+![Word Cloud Visualization](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/fa862685-fc74-4f8e-a07b-cd41aef7c424)
 
-# Load your processed dataset (change path accordingly)
-df = pd.read_csv("customer_feedback.csv")
+### Top 10 Most Frequent Words in "reason" Column after Stopword Removal
+![Top 10 Words](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/3097dc06-704d-4cdd-9a93-09c87ef6a092)
+*Caption: Bar chart visualization showing the top 10 most frequent words in the "reason" column after removing stopwords.*
 
-# Ensure columns exist
-# Assume columns: ['feedback', 'reason', 'label']
-print(df.head())
+### Sentiment Analysis of Customer Feedback with Histogram Visualization
+![Sentiment Analysis](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/0a461287-cf39-42eb-8a37-89805f8070ef)
+*Caption: Histogram visualization of the sentiment scores after performing sentiment analysis on the customer feedback.*
 
-# ==============================
-# 1️⃣ Label Distribution
-# ==============================
-plt.figure(figsize=(6, 4))
-sns.countplot(x='label', data=df, palette='coolwarm')
-plt.title("Distribution of Sentiment Labels")
-plt.xlabel("Sentiment Label (0 = Negative, 1 = Positive)")
-plt.ylabel("Count")
-plt.tight_layout()
-plt.savefig("label_distribution.png", dpi=300)
-plt.show()
+### Co-occurrence of Top 30 Most Frequent Words in Customer Feedback Dataset with Heatmap Visualization
+![Co-occurrence Heatmap](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/501fa775-0883-4c28-9280-f0fe3bdecd44)
+*Caption: Heatmap visualization showing the co-occurrence of the top 30 most frequent words in the "reason" column.*
 
-# ==============================
-# 2️⃣ Word Cloud
-# ==============================
-text = " ".join(df['feedback'].astype(str))
-wordcloud = WordCloud(width=800, height=400, background_color='white', colormap='coolwarm').generate(text)
+### Distribution of Sentiment Labels in Customer Feedback Dataset as a Pie Chart
+![Sentiment Distribution](https://github.com/Aravinth-Megnath/NLP-Project/assets/120720408/cc65b18a-4c1e-4431-966f-f4479c7b6b4f)
+*Caption: Pie chart visualization showing the distribution of sentiment labels in the customer feedback dataset.*
 
-plt.figure(figsize=(10, 5))
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.axis("off")
-plt.title("Word Cloud Visualization of Customer Feedback")
-plt.tight_layout()
-plt.savefig("wordcloud.png", dpi=300)
-plt.show()
-
-# ==============================
-# 3️⃣ Top 10 Most Frequent Words in 'reason' Column
-# ==============================
-vectorizer = CountVectorizer(stop_words='english')
-X = vectorizer.fit_transform(df['reason'].astype(str))
-word_freq = dict(zip(vectorizer.get_feature_names_out(), np.asarray(X.sum(axis=0)).ravel()))
-sorted_words = dict(sorted(word_freq.items(), key=lambda x: x[1], reverse=True)[:10])
-
-plt.figure(figsize=(8, 4))
-sns.barplot(x=list(sorted_words.keys()), y=list(sorted_words.values()), palette="viridis")
-plt.title("Top 10 Most Frequent Words in 'reason' Column")
-plt.xlabel("Words")
-plt.ylabel("Frequency")
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.savefig("top10_words.png", dpi=300)
-plt.show()
-
-# ==============================
-# 4️⃣ Sentiment Histogram (Distribution)
-# ==============================
-plt.figure(figsize=(6, 4))
-sns.histplot(df['label'], kde=True, color='teal', bins=3)
-plt.title("Histogram of Sentiment Distribution")
-plt.xlabel("Sentiment (0=Negative, 1=Positive)")
-plt.ylabel("Frequency")
-plt.tight_layout()
-plt.savefig("sentiment_histogram.png", dpi=300)
-plt.show()
-
-# ==============================
-# 5️⃣ Co-occurrence Heatmap (Top 30 Words)
-# ==============================
-# Create co-occurrence matrix
-cv = CountVectorizer(max_features=30, stop_words='english')
-X = cv.fit_transform(df['feedback'].astype(str))
-Xc = (X.T * X)
-Xc.setdiag(0)
-co_occurrence_df = pd.DataFrame(Xc.toarray(), columns=cv.get_feature_names_out(), index=cv.get_feature_names_out())
-
-plt.figure(figsize=(12, 8))
-sns.heatmap(co_occurrence_df, cmap="YlGnBu")
-plt.title("Co-occurrence Heatmap of Top 30 Words")
-plt.tight_layout()
-plt.savefig("cooccurrence_heatmap.png", dpi=300)
-plt.show()
-
-# ==============================
-# 6️⃣ Pie Chart of Sentiment Distribution
-# ==============================
-label_counts = df['label'].value_counts().reset_index()
-label_counts.columns = ['label', 'count']
-
-fig = px.pie(label_counts, values='count', names='label',
-             title='Distribution of Sentiment Labels (Pie Chart)',
-             color_discrete_sequence=px.colors.sequential.RdBu)
-fig.show()
 
 
 💼 AI & NLP Enthusiast | Data Science | Machine Learning | Deep Learning
