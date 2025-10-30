@@ -158,11 +158,109 @@ Build real-time monitoring dashboard
 
 Expand chatbot capabilities for deeper conversational analytics
 
-👨‍💻 Author
+# ==========================================
+# 📊 Sentiment Analysis EDA Visualization Code
+# ==========================================
 
-Raghav Gupta
-📧 Email: guptaraghav81@gmail.com
+# ✅ Import necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from wordcloud import WordCloud
+import plotly.express as px
+from sklearn.feature_extraction.text import CountVectorizer
 
-🌐 GitHub: @guptaraghav81
+# Load your processed dataset (change path accordingly)
+df = pd.read_csv("customer_feedback.csv")
+
+# Ensure columns exist
+# Assume columns: ['feedback', 'reason', 'label']
+print(df.head())
+
+# ==============================
+# 1️⃣ Label Distribution
+# ==============================
+plt.figure(figsize=(6, 4))
+sns.countplot(x='label', data=df, palette='coolwarm')
+plt.title("Distribution of Sentiment Labels")
+plt.xlabel("Sentiment Label (0 = Negative, 1 = Positive)")
+plt.ylabel("Count")
+plt.tight_layout()
+plt.savefig("label_distribution.png", dpi=300)
+plt.show()
+
+# ==============================
+# 2️⃣ Word Cloud
+# ==============================
+text = " ".join(df['feedback'].astype(str))
+wordcloud = WordCloud(width=800, height=400, background_color='white', colormap='coolwarm').generate(text)
+
+plt.figure(figsize=(10, 5))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+plt.title("Word Cloud Visualization of Customer Feedback")
+plt.tight_layout()
+plt.savefig("wordcloud.png", dpi=300)
+plt.show()
+
+# ==============================
+# 3️⃣ Top 10 Most Frequent Words in 'reason' Column
+# ==============================
+vectorizer = CountVectorizer(stop_words='english')
+X = vectorizer.fit_transform(df['reason'].astype(str))
+word_freq = dict(zip(vectorizer.get_feature_names_out(), np.asarray(X.sum(axis=0)).ravel()))
+sorted_words = dict(sorted(word_freq.items(), key=lambda x: x[1], reverse=True)[:10])
+
+plt.figure(figsize=(8, 4))
+sns.barplot(x=list(sorted_words.keys()), y=list(sorted_words.values()), palette="viridis")
+plt.title("Top 10 Most Frequent Words in 'reason' Column")
+plt.xlabel("Words")
+plt.ylabel("Frequency")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig("top10_words.png", dpi=300)
+plt.show()
+
+# ==============================
+# 4️⃣ Sentiment Histogram (Distribution)
+# ==============================
+plt.figure(figsize=(6, 4))
+sns.histplot(df['label'], kde=True, color='teal', bins=3)
+plt.title("Histogram of Sentiment Distribution")
+plt.xlabel("Sentiment (0=Negative, 1=Positive)")
+plt.ylabel("Frequency")
+plt.tight_layout()
+plt.savefig("sentiment_histogram.png", dpi=300)
+plt.show()
+
+# ==============================
+# 5️⃣ Co-occurrence Heatmap (Top 30 Words)
+# ==============================
+# Create co-occurrence matrix
+cv = CountVectorizer(max_features=30, stop_words='english')
+X = cv.fit_transform(df['feedback'].astype(str))
+Xc = (X.T * X)
+Xc.setdiag(0)
+co_occurrence_df = pd.DataFrame(Xc.toarray(), columns=cv.get_feature_names_out(), index=cv.get_feature_names_out())
+
+plt.figure(figsize=(12, 8))
+sns.heatmap(co_occurrence_df, cmap="YlGnBu")
+plt.title("Co-occurrence Heatmap of Top 30 Words")
+plt.tight_layout()
+plt.savefig("cooccurrence_heatmap.png", dpi=300)
+plt.show()
+
+# ==============================
+# 6️⃣ Pie Chart of Sentiment Distribution
+# ==============================
+label_counts = df['label'].value_counts().reset_index()
+label_counts.columns = ['label', 'count']
+
+fig = px.pie(label_counts, values='count', names='label',
+             title='Distribution of Sentiment Labels (Pie Chart)',
+             color_discrete_sequence=px.colors.sequential.RdBu)
+fig.show()
+
 
 💼 AI & NLP Enthusiast | Data Science | Machine Learning | Deep Learning
