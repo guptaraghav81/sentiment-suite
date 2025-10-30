@@ -139,7 +139,7 @@ python src/sentiment_model/train_model.py
 
 # Launch web app
 streamlit run src/app/app.py
----
+```
 📈 Deliverables Summary
 Part	Description	File
 1	Cleaned Dataset & Preprocessing Code	data_preprocessing.py / .ipynb
