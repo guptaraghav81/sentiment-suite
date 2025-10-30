@@ -106,10 +106,6 @@ There are several possible future enhancements for this project:
 - Incorporate additional features or data sources, such as user demographics, app usage statistics, or user behavior patterns, to enrich the sentiment analysis and gain deeper insights into customer satisfaction.
 - Explore other state-of-the-art natural language processing models, such as GPT-3 or Transformer-XL, to compare their performance with BERT and potentially achieve even better sentiment analysis results.
 - Implement a real-time sentiment analysis system that continuously processes incoming customer feedback, providing instant insights for effective decision-making and customer satisfaction improvements.
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgements
 We would like to express our gratitude to the developers of BERT and the creators of the customer feedback dataset used in this project. Their contributions have been instrumental in the successful execution of this sentiment analysis project.
 
@@ -117,9 +113,6 @@ We would like to express our gratitude to the developers of BERT and the creator
 ## Feedback
 
 Your feedback is important to me! If you have any suggestions, questions, or feedback regarding this project, please feel free to reach out to me at:
-
-- Email: [aravinthmegnath@gmail.com]
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue.svg)](https://www.linkedin.com/in/aravinth-meganathan-200667a1/)
 
 I appreciate your valuable input and look forward to hearing from you!
 
