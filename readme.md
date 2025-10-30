@@ -91,6 +91,7 @@ To **design and develop an AI-based system** capable of:
 
 ## 📂 Project Structure
 ---
+```
 sentiment-suite/
 ├── data/ # Raw & processed datasets
 ├── src/
@@ -106,7 +107,7 @@ sentiment-suite/
 ├── README.md
 └── .gitignore
 
-
+```
 ---
 
 ## 📊 Evaluation Metrics
